@@ -11,6 +11,37 @@
         }
         
         
+        /* Navbar animation styles */
+        #navbar {
+            transition: all 0.3s ease;
+        }
+        
+        #navbar .navbar-container {
+            transition: all 0.3s ease;
+        }
+        
+        #navbar.expanded .navbar-container {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        
+        #navbar.expanded .navbar-brand {
+            font-size: 2rem;
+        }
+        
+        #navbar.expanded .nav-link {
+            font-size: 1.125rem;
+        }
+        
+        #navbar.collapsed .navbar-container {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        
+        #navbar.collapsed .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
         .nav-link {
             transition: all 0.3s ease;
         }
@@ -46,10 +77,10 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Fixed Navigation Bar -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div class="container mx-auto px-4 py-4">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 expanded">
+        <div class="navbar-container container mx-auto px-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-teal-600">
+                <div class="navbar-brand text-2xl font-bold text-teal-600 transition-all duration-300">
                     Addithya Prasad
                 </div>
                 <div class="hidden md:flex space-x-6">
@@ -406,6 +437,39 @@
 
     <!-- JavaScript for Scroll Spy and Mobile Menu -->
     <script>
+        // Navbar scroll animation
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+        
+        function handleNavbarScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 50) {
+                navbar.classList.remove('expanded');
+                navbar.classList.add('collapsed');
+            } else {
+                navbar.classList.remove('collapsed');
+                navbar.classList.add('expanded');
+            }
+            
+            lastScrollTop = scrollTop;
+        }
+        
+        // Throttle scroll event for better performance
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleNavbarScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        
+        // Initialize navbar state
+        handleNavbarScroll();
+        
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
