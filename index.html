@@ -28,6 +28,15 @@
             background-color: rgba(249, 250, 251, 0.3) !important;
         }
         
+        /* Add text shadows for better visibility */
+        h1, h2, h3 {
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        
+        p {
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+        }
+        
         .nav-link {
             transition: all 0.3s ease;
         }
@@ -61,7 +70,7 @@
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-900">
     <!-- Fixed Navigation Bar -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <div class="container mx-auto px-4 py-4">
@@ -70,13 +79,13 @@
                     Addithya Prasad
                 </div>
                 <div class="hidden md:flex space-x-6">
-                    <a href="#about" class="nav-link text-gray-700 hover:text-teal-600">About Me</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-teal-600">Projects</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-teal-600">Skills</a>
-                    <a href="#certifications" class="nav-link text-gray-700 hover:text-teal-600">Certifications</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-teal-600">About Me</a>
+                    <a href="#projects" class="nav-link text-gray-900 hover:text-teal-600">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-900 hover:text-teal-600">Skills</a>
+                    <a href="#certifications" class="nav-link text-gray-900 hover:text-teal-600">Certifications</a>
                 </div>
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-teal-600">
+                <button id="mobile-menu-btn" class="md:hidden text-gray-900 hover:text-teal-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -84,10 +93,10 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-                <a href="#about" class="block nav-link text-gray-700 hover:text-teal-600 py-2">About Me</a>
-                <a href="#projects" class="block nav-link text-gray-700 hover:text-teal-600 py-2">Projects</a>
-                <a href="#skills" class="block nav-link text-gray-700 hover:text-teal-600 py-2">Skills</a>
-                <a href="#certifications" class="block nav-link text-gray-700 hover:text-teal-600 py-2">Certifications</a>
+                <a href="#about" class="block nav-link text-gray-900 hover:text-teal-600 py-2">About Me</a>
+                <a href="#projects" class="block nav-link text-gray-900 hover:text-teal-600 py-2">Projects</a>
+                <a href="#skills" class="block nav-link text-gray-900 hover:text-teal-600 py-2">Skills</a>
+                <a href="#certifications" class="block nav-link text-gray-900 hover:text-teal-600 py-2">Certifications</a>
             </div>
         </div>
     </nav>
@@ -101,18 +110,18 @@
                     <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
                         Hi, I'm <span class="text-teal-600">Addithya Prasad</span>
                     </h1>
-                    <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed">
                         A dedicated technology professional passionate about building innovative solutions 
                         and delivering excellence in software development. I combine technical expertise 
                         with a strong commitment to continuous learning and professional growth.
                     </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-lg text-gray-800 mb-8 leading-relaxed">
                         Currently pursuing my education at Sheridan College, I am actively developing 
                         my skills in modern technologies and best practices. My experience spans various 
                         domains including software development, security, and cloud technologies, with 
                         a focus on creating robust and scalable solutions.
                     </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-lg text-gray-800 mb-8 leading-relaxed">
                         I am committed to staying current with industry trends and continuously expanding 
                         my knowledge base. Whether working on academic projects, personal initiatives, or 
                         contributing to team efforts, I bring dedication, attention to detail, and a 
@@ -134,7 +143,7 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 text-center">
                         Featured <span class="text-teal-600">Projects</span>
                     </h2>
-                    <p class="text-xl text-gray-600 text-center mb-12">
+                    <p class="text-xl text-gray-800 text-center mb-12">
                         A selection of projects showcasing my skills and experience
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -143,7 +152,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">E-Commerce Platform</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     A full-featured e-commerce solution with real-time inventory management, 
                                     secure payment processing, and comprehensive admin dashboard.
                                 </p>
@@ -161,7 +170,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">Task Management App</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     An intuitive project management tool with collaborative features, 
                                     real-time updates, and advanced filtering capabilities.
                                 </p>
@@ -179,7 +188,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">Analytics Dashboard</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     A comprehensive data visualization platform with interactive charts, 
                                     custom reporting, and real-time data streaming.
                                 </p>
@@ -197,7 +206,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">Mobile Banking App</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     A secure mobile banking application with biometric authentication, 
                                     transaction history, and budget tracking features.
                                 </p>
@@ -215,7 +224,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">Content Management System</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     A flexible CMS with WYSIWYG editor, media library, and role-based 
                                     access control for managing digital content.
                                 </p>
@@ -233,7 +242,7 @@
                             <div class="h-48 bg-gradient-to-br from-teal-500 to-teal-700"></div>
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold mb-2 text-gray-900">API Gateway Service</h3>
-                                <p class="text-gray-600 mb-4">
+                                <p class="text-gray-800 mb-4">
                                     A microservices API gateway with rate limiting, authentication, 
                                     and request routing for distributed systems.
                                 </p>
@@ -257,7 +266,7 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 text-center">
                         Core Technical <span class="text-teal-600">Skills</span>
                     </h2>
-                    <p class="text-xl text-gray-600 text-center mb-12">
+                    <p class="text-xl text-gray-800 text-center mb-12">
                         Technologies and tools I work with
                     </p>
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -321,7 +330,7 @@
                     <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 text-center">
                         Certifications & <span class="text-teal-600">Awards</span>
                     </h2>
-                    <p class="text-xl text-gray-600 text-center mb-12">
+                    <p class="text-xl text-gray-800 text-center mb-12">
                         Professional recognitions and achievements
                     </p>
                     <div class="space-y-6">
@@ -330,8 +339,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">AWS Certified Solutions Architect</h3>
-                                    <p class="text-gray-600 mb-2">Amazon Web Services</p>
-                                    <p class="text-sm text-gray-500">Issued: January 2023 • Expires: January 2026</p>
+                                    <p class="text-gray-800 mb-2">Amazon Web Services</p>
+                                    <p class="text-sm text-gray-700">Issued: January 2023 • Expires: January 2026</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Professional</span>
@@ -344,8 +353,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Google Cloud Professional Developer</h3>
-                                    <p class="text-gray-600 mb-2">Google Cloud Platform</p>
-                                    <p class="text-sm text-gray-500">Issued: March 2022 • Valid</p>
+                                    <p class="text-gray-800 mb-2">Google Cloud Platform</p>
+                                    <p class="text-sm text-gray-700">Issued: March 2022 • Valid</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Professional</span>
@@ -358,8 +367,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Certified Kubernetes Administrator (CKA)</h3>
-                                    <p class="text-gray-600 mb-2">Cloud Native Computing Foundation</p>
-                                    <p class="text-sm text-gray-500">Issued: June 2023 • Valid</p>
+                                    <p class="text-gray-800 mb-2">Cloud Native Computing Foundation</p>
+                                    <p class="text-sm text-gray-700">Issued: June 2023 • Valid</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Professional</span>
@@ -372,8 +381,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Outstanding Developer Award</h3>
-                                    <p class="text-gray-600 mb-2">Tech Innovation Summit 2023</p>
-                                    <p class="text-sm text-gray-500">Awarded: September 2023</p>
+                                    <p class="text-gray-800 mb-2">Tech Innovation Summit 2023</p>
+                                    <p class="text-sm text-gray-700">Awarded: September 2023</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Award</span>
@@ -386,8 +395,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">MongoDB Certified Developer</h3>
-                                    <p class="text-gray-600 mb-2">MongoDB University</p>
-                                    <p class="text-sm text-gray-500">Issued: November 2022 • Valid</p>
+                                    <p class="text-gray-800 mb-2">MongoDB University</p>
+                                    <p class="text-sm text-gray-700">Issued: November 2022 • Valid</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Associate</span>
@@ -400,8 +409,8 @@
                             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Best Open Source Contribution</h3>
-                                    <p class="text-gray-600 mb-2">Developer Community Awards 2022</p>
-                                    <p class="text-sm text-gray-500">Awarded: December 2022</p>
+                                    <p class="text-gray-800 mb-2">Developer Community Awards 2022</p>
+                                    <p class="text-sm text-gray-700">Awarded: December 2022</p>
                                 </div>
                                 <div class="mt-4 md:mt-0">
                                     <span class="px-4 py-2 bg-teal-100 text-teal-700 rounded-full font-semibold">Award</span>
@@ -417,7 +426,7 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400">© 2024 Addithya Prasad. All rights reserved.</p>
+            <p class="text-gray-700">© 2024 Addithya Prasad. All rights reserved.</p>
         </div>
     </footer>
 
