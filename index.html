@@ -222,6 +222,65 @@
         .text-justify {
             text-align: justify !important;
         }
+        
+        /* Dropdown menu styles */
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-dropdown-menu a:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding-left: 2rem;
+        }
+        
+        .nav-dropdown-toggle {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .nav-dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            margin-left: 0.25rem;
+        }
+        
+        .nav-dropdown:hover .nav-dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -230,12 +289,17 @@
         <div class="navbar-container container px-4">
             <div class="d-flex justify-content-between align-items-center">
                 <a class="navbar-brand fw-bold gradient-text" href="#" style="font-size: 2.5rem;">Addithya Prasad</a>
-                <div class="d-none d-md-flex gap-4">
+                <div class="d-none d-md-flex gap-4 align-items-center">
                     <a href="#about" class="nav-link text-dark">About Me</a>
                     <a href="#projects" class="nav-link text-dark">Projects</a>
                     <a href="#skills" class="nav-link text-dark">Skills</a>
-                    <a href="#certifications" class="nav-link text-dark">Certifications</a>
-                    <a href="#awards" class="nav-link text-dark">Awards</a>
+                    <div class="nav-dropdown">
+                        <a href="#educational-certification" class="nav-link text-dark nav-dropdown-toggle">Educational Certification</a>
+                        <div class="nav-dropdown-menu">
+                            <a href="#certifications-subsection" class="nav-link">Certifications</a>
+                            <a href="#awards-subsection" class="nav-link">Awards</a>
+                        </div>
+                    </div>
                 </div>
                 <button id="mobile-menu-btn" class="d-md-none btn btn-link text-dark">
                     <i class="bi bi-list" style="font-size: 1.5rem;"></i>
@@ -245,8 +309,9 @@
                 <a href="#about" class="d-block nav-link text-dark py-2">About Me</a>
                 <a href="#projects" class="d-block nav-link text-dark py-2">Projects</a>
                 <a href="#skills" class="d-block nav-link text-dark py-2">Skills</a>
-                <a href="#certifications" class="d-block nav-link text-dark py-2">Certifications</a>
-                <a href="#awards" class="d-block nav-link text-dark py-2">Awards</a>
+                <a href="#educational-certification" class="d-block nav-link text-dark py-2">Educational Certification</a>
+                <a href="#certifications-subsection" class="d-block nav-link text-dark py-2 ps-4" style="font-size: 0.9rem;">→ Certifications</a>
+                <a href="#awards-subsection" class="d-block nav-link text-dark py-2 ps-4" style="font-size: 0.9rem;">→ Awards</a>
             </div>
         </div>
     </nav>
@@ -536,19 +601,24 @@
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="section py-5">
+        <!-- Educational Certification Section -->
+        <section id="educational-certification" class="section py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center mb-5">
                         <h2 class="display-4 fw-bold mb-3">
-                            <span class="gradient-text">Certifications</span>
+                            Educational <span class="gradient-text">Certification</span>
                         </h2>
-                        <p class="lead">Professional certifications and credentials</p>
+                        <p class="lead">Academic credentials, certifications, and achievements</p>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
+
+                <!-- Certifications Subsection -->
+                <div id="certifications-subsection" class="row mb-5" style="scroll-margin-top: 120px;">
+                    <div class="col-12 mb-4">
+                        <h3 class="h3 fw-bold text-center mb-4">Certifications</h3>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
                         <div class="certification-card card mb-3 shadow-sm border-start border-5 border-info">
                             <div class="card-body">
                                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
@@ -604,22 +674,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Awards Section -->
-        <section id="awards" class="section py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center mb-5">
-                        <h2 class="display-4 fw-bold mb-3">
-                            <span class="gradient-text">Awards</span>
-                        </h2>
-                        <p class="lead">Recognition for academic and professional achievements</p>
+                <!-- Awards Subsection -->
+                <div id="awards-subsection" class="row" style="scroll-margin-top: 120px;">
+                    <div class="col-12 mb-4">
+                        <h3 class="h3 fw-bold text-center mb-4">Awards</h3>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 mx-auto">
                         <div class="certification-card card mb-3 shadow-sm border-start border-5 border-warning">
                             <div class="card-body">
                                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
@@ -631,6 +692,24 @@
                                     <div class="d-flex flex-column align-items-end gap-2 mt-3 mt-md-0">
                                         <span class="badge bg-warning text-dark">Academic Excellence</span>
                                         <a href="Dean_letter_101530985.pdf" download="Dean_Honour_List_Spring_2025.pdf" class="btn btn-verify">
+                                            <i class="bi bi-download me-1"></i>Download
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certification-card card mb-3 shadow-sm border-start border-5 border-primary">
+                            <div class="card-body">
+                                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                                    <div>
+                                        <h3 class="card-title fw-bold mb-2">Unofficial Transcript</h3>
+                                        <p class="text-muted mb-2">George Brown College</p>
+                                        <p class="text-muted small">Academic Record</p>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-end gap-2 mt-3 mt-md-0">
+                                        <span class="badge bg-primary">Transcript</span>
+                                        <a href="#" class="btn btn-verify">
                                             <i class="bi bi-download me-1"></i>Download
                                         </a>
                                     </div>
